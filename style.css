@@ -57,7 +57,10 @@ nav{
     padding: 1px 5px;
 }
 
-
+span{
+    font-family: "Nanum Pen Script", cursive;
+    font-size: 45px;
+}
 nav ul li{
     display: inline;
     padding: 10px;
