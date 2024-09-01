@@ -17,6 +17,12 @@ nav {
   border-bottom: 2px solid black;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: white;
 }
 
 span {
@@ -31,6 +37,7 @@ span h1 {
 nav ul li {
   display: inline-block;
   margin: 5px;
+  cursor: pointer;
 }
 
 .container {
