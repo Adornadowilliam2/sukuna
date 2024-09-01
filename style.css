@@ -1,4 +1,7 @@
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -31,24 +34,34 @@ nav ul li {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   margin-inline: auto;
 }
 
 main {
   background-image: url(media/bg.gif);
-  height: 80vh;
+  height: 100vh;
   background-size: 100% 100%;
-  margin: 10px;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "Nosifer", sans-serif;
   color: white;
   font-size: 5pc;
-  flex-wrap: wrap;
 }
+
+main h1 {
+  font-family: "Nosifer", sans-serif;
+}
+
+main p {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  text-shadow: 0 0 10px black;
+}
+
 .btn button:nth-child(1) {
   background-color: red;
   color: white;
