@@ -14,9 +14,10 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="media/icon.jpg" type="image/x-icon" />
+    <style></style>
   </head>
   <body>
-    <nav>
+    <nav id="navbar">
       <span>
         <img src="media/logo.png" alt="logo" />
         <h1>Sukuna</h1>
@@ -35,15 +36,48 @@
           quibusdam.
         </p>
         <div class="btn">
-          <button>
+          <button
+            onclick="window.open('https://jujutsu-kaisen.fandom.com/wiki/Jujutsu_Kaisen_Wiki', '_blank') "
+          >
+            <div class="shinyEffect"></div>
             <a href="https://jujutsu-kaisen.fandom.com/wiki/Jujutsu_Kaisen_Wiki"
               >Learn More</a
-            ></button
-          ><button>
+            >
+          </button>
+          <button
+            onclick="window.open('https://chapmanganato.to/manga-ba979135', '_blank')"
+          >
+            <div class="shinyEffect"></div>
             <a href="https://chapmanganato.to/manga-ba979135">Browse</a>
           </button>
         </div>
       </main>
     </div>
+
+    <script>
+      const navbar = document.getElementById("navbar");
+      let timeout;
+
+      function showNavbar() {
+        navbar.classList.remove("hidden");
+        resetTimer();
+      }
+
+      function hideNavbar() {
+        navbar.classList.add("hidden");
+      }
+
+      function resetTimer() {
+        clearTimeout(timeout);
+        timeout = setTimeout(hideNavbar, 5000);
+      }
+
+      // Event listeners for mouse movement and key presses
+      document.addEventListener("mousemove", showNavbar);
+      document.addEventListener("keypress", showNavbar);
+
+      // Initial call to reset the timer
+      resetTimer();
+    </script>
   </body>
 </html>
