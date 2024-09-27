@@ -7,7 +7,7 @@
 }
 
 nav img {
-  width: 100px;
+  width: clamp(40px, 10vw, 100px);
 }
 
 nav {
@@ -48,14 +48,13 @@ nav ul li {
 main {
   background-image: url(media/bg.gif);
   height: 100vh;
-  background-size: 100% 100%;
-
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   color: white;
-  font-size: 5pc;
+  font-size: clamp(1rem, 5vw, 5pc);
 }
 
 main h1 {
@@ -64,80 +63,64 @@ main h1 {
 
 main p {
   font-family: "Arsenal SC", sans-serif;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
   text-align: center;
   text-shadow: 0 0 10px black;
+  position: absolute;
+  margin-top: 10%;
 }
 
-.btn button:nth-child(1) {
+.btn button {
   background-color: red;
   color: white;
   border: none;
-  padding: 10px;
+  padding: 10px 15px;
   border-radius: 5px;
   box-shadow: 0 0 10px black;
+  margin: 10px;
 }
 
 .btn button:nth-child(2) {
   background-color: orangered;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px black;
-}
-
-.btn button {
-  margin: 10px;
 }
 
 a {
   text-decoration: none;
   color: white;
 }
+
 @media (max-width: 1024px) {
-  nav img {
-    width: 100px;
-  }
   main {
     height: 80vh;
-    font-size: 50px;
   }
 }
 
 @media (max-width: 768px) {
-  nav img {
-    width: 50px;
-  }
   main {
     height: 90vh;
-    font-size: 50px;
+  }
+
+  main p {
+    position: relative;
+    margin-top: 0;
   }
 }
 
 @media (max-width: 425px) {
-  nav img {
-    width: 50px;
-  }
   main {
-    height: 90vh;
-    font-size: 24px;
+    font-size: clamp(1rem, 5vw, 24px);
   }
 }
 
 @media (max-width: 375px) {
   nav img {
-    width: 40px;
-  }
-  main {
-    height: 90vh;
-    font-size: 24px;
+    width: clamp(30px, 8vw, 50px);
   }
 }
 
 @media (max-width: 350px) {
   nav img {
-    width: 50px;
+    width: clamp(40px, 10vw, 50px);
   }
 
   main {
@@ -149,9 +132,9 @@ a {
   nav img {
     display: none;
   }
+
   main {
-    height: 90vh;
-    font-size: 24px;
+    font-size: clamp(1rem, 5vw, 24px);
   }
 }
 
@@ -161,6 +144,6 @@ a {
   }
 
   main {
-    font-size: 15px;
+    font-size: clamp(0.8rem, 5vw, 15px);
   }
 }
